@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-chunk-cutter"
+version = "0.1.0"
+description = "Boundary-aware semantic text chunker respecting sentences, code blocks, and markdown"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+semantic-chunk-cutter = "semantic_chunk_cutter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semantic_chunk_cutter*"]
